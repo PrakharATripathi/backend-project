@@ -75,7 +75,7 @@ userSchema.methods.genrateAccessToken = async function (password) {
 userSchema.methods.genrateRefreshToken = async function (password) {
     return jwt.sign(
         {
-            _id: this._id,
+            _id: this._id
         },
         process.env.REFRESH_TOKEN_SECRET,
         {
