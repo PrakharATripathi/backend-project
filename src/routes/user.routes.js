@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { registerUser,loginUser,logoutUser } from '../controllers/user.controller.js';
+import { registerUser,loginUser,logoutUser, refreshAccessToken } from '../controllers/user.controller.js';
 import { upload } from '../middlewares/multer.middleware.js';
 import {verfiyJwt} from "../middlewares/auth.middleware.js"
 
@@ -19,5 +19,6 @@ router.route("/login").post(loginUser)
 
 // sercure
 router.route("/logout").post(verfiyJwt, logoutUser);
+router.route("/refreshtoken").post(refreshAccessToken);
 
 export default router;
