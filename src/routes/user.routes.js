@@ -18,7 +18,7 @@ router.route("/login").post(loginUser)
 // sercure
 router.route("/logout").post(verfiyJwt, logoutUser);
 router.route("/refreshtoken").post(refreshAccessToken);
-router.route("/changePassword").post(verfiyJwt,changeCurrentPassword);
+router.route("/change-password").post(verfiyJwt,changeCurrentPassword);
 router.route("/currentUSer").get(verfiyJwt,getCurrentUser);
 router.route("/update").patch(verfiyJwt,updateAccountDetails);
 router.route("/avatar").patch(verfiyJwt,upload.single("avatat"),updateUserAvatar);

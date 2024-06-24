@@ -4,6 +4,7 @@ import { ApiError } from "../utils/apierror.js";
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import { ApiResponse } from "../utils/apiresponce.js";
 import jwt from 'jsonwebtoken';
+import mongoose from "mongoose";
 
 const registerUser = asyncHandler(async (req, res) => {
     const { fullName, email, username, password } = req.body;
